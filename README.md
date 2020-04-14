@@ -14,7 +14,7 @@ Clone this repo, open a terminal, move to the repository root and run
 `pip install .`
 
 # Usage
-Have a look at the example python-notebook in the project's `docs/` folder for a complete use-case.
+Have a look at the [example python-notebook](https://mpascucci.github.io/python-geoJSON/) in the project's `docs/` folder for a complete use-case.
 
 
 ### basic Usage
