@@ -21,6 +21,7 @@ Have a look at the [example python-notebook](https://mpascucci.github.io/python-
 ### basic Usage
 ```python
 import shp2geoJSON as geoJ
+import json
 
 # load shapefile
 features = geoJ.shapefile2geoJSON_features(shp_path)
@@ -29,5 +30,5 @@ features = geoJ.shapefile2geoJSON_features(shp_path)
 
 # save as geoJSON
 with open("geo_data.json", "w") as f:
-  f.write(dumps(features))
+  f.write(json.dumps(features))
 ```
