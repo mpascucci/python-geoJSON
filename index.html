@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+
+    <style>
+        div#main_map {
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_map"></div>
+</body>
+
+<script lang="javascript">
+    var map = L.map('main_map').setView([41.92, 12.49], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    function defaultStyle() {
+        return {
+        "color": "#000000",
+        "weight": 1,
+        "opacity": 1.0,
+        "fillColor": "#000000",
+        "fillOpacity": 0.3}
+    };
+    
+    $.getJSON('geo_data.json',
+        function(jd) {
+            console.log(jd);
+            L.geoJSON(jd,
+            { style: function(feature) {
+                        var style = defaultStyle();
+                        // style.fillColor = feature.properties.fillColor;
+                        return style;
+                    }
+            }).addTo(map);
+        });
+
+
+</script>

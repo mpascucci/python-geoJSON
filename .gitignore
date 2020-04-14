@@ -1,0 +1,8 @@
+Italy_shapefile/
+gadm36_ITA_shp/
+*.json
+*.csv
+.ipynb_checkpoints/
+howto.ipynb
+*.egg-info/
+build/
