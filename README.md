@@ -2,7 +2,7 @@
 
 The `shp2geoJSON` python module is a set of tools to convert geographical data from shapefiles to `geoJSON` format (and add graphical information such as color and opacity to the shapes).
 
-`geoJSON` is a popular format for encoding of geographic data structures, which can be directly used to visualize data on the web with tools such as (Leaflet)[https://leafletjs.com/examples/geojson/].
+`geoJSON` is a popular format for encoding of geographic data structures, which can be directly used to visualize data on the web with tools such as [Leaflet](https://leafletjs.com/examples/geojson/).
 
 With this module it is possible to load a shapefile, add graphic informations based on data, plot the result in python and export it as geoJSON.
 
