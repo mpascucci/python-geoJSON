@@ -7,7 +7,8 @@ The `shp2geoJSON` python module is a set of tools to convert geographical data f
 With this module it is possible to load a shapefile, add graphic informations based on data, plot the result in python and export it as geoJSON.
 
 A plot created with this module:
-![image](doc/italy_population.png)
+
+![image](docs/italy_population.png)
 
 # Download and instal
 Clone this repo, open a terminal, move to the repository root and run
